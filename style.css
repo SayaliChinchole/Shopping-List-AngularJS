@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top-container {
+  display:flex ;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+    width: 60%;
+    margin-top: 20px;
+    box-shadow: 0px 0px 15px rgb(180, 178, 178);
+    
+}
+.header {
+    width: 100%;
+    background-color: rgb(240, 239, 239);
+}
+.header-text {
+    padding: 20px;
+}
+ul {
+    list-style-type: none;
+}
+ul li {
+    padding: 20px;
+    border-bottom: 2px solid rgb(240, 239, 239);
+}
+.icons {
+    float: right;
+    margin: 0 7px;
+    color: rgb(155, 153, 153);
+    
+}
+.remove-icon:hover{
+    color: black;
+}
+.icons:hover {
+    
+}
+.done {
+    background-color: gray;
+} 
+.add-item-container{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 239, 239);
+}
+.add-item-input{
+    padding: 0.5rem;
+    width: 70%;
+    outline: none;
+}
+.add-item-button{
+    padding: 0.6rem 1rem;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: white;
+}
+.add-item-button:hover{
+    background-color: rgb(33, 126, 36);
+}
+
+/* @media (max-width:600px){
+   .container {
+       width: 100%;
+       margin: 0;
+   }
+} */
+.error-container{
+    background-color: rgb(240, 239, 239);
+    padding: 0rem 1.6rem 1rem 1.6rem;
+    color: red;
+}
+.item-done{
+    background-color: rgb(241, 239, 239);
+}
+.item-done-icon{
+    color: green;
+}
+
+.icon-done:hover {
+    color: rgb(90, 146, 90);
+}

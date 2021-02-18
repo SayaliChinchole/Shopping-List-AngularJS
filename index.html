@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Shopping List AngularJS</title>
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="script.js"></script>
+
+        <script src="https://kit.fontawesome.com/e20c228363.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div ng-app="myShoppingList" ng-controller="myCtrl">
+            <div class="top-container">
+                <div class="container">
+                    <!--header-->
+                    <div class="header">
+                        <h1 class="header-text">My Shopping List</h1>
+                        <p ng-click="sortList()">Sort </p>
+                    </div>
+
+                    <!--Shopping list items-->
+                    
+                    <ul class="list">
+                        <li ng-class="{'item-done': item.done}"
+                            class="list-item" 
+                            ng-repeat="item in items">
+                            {{item.name}} 
+                            <span>
+                                <i ng-class="{'item-done-icon': item.done}"
+                                    ng-click="markasdoneornot($index)"
+                                    class="fas fa-check-circle icons icon-done" 
+                                    title="mark as done or not"></i>
+                                <i ng-click="removeItem($index)"
+                                    class="fas fa-times icons remove-icon" 
+                                    title="delete item"></i>
+                            </span>
+                        </li>
+                        <!-- <li ng-repeat="x in products">{{x}}<span ng-click="removeItem($index)">×</span></li> -->
+                    </ul>
+
+                    <div class="add-item-container">
+
+                        <input ng-model="addMe" name="addMe"
+                                class="add-item-input"
+                                placeholder="Add new item" >
+                        <button ng-click="addItem()"
+                                class="add-item-button">
+                                Add
+                        </button>
+                     
+                    </div>
+                    <p class="error-container">{{errortext}}</p>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
