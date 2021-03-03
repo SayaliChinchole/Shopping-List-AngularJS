@@ -19,15 +19,28 @@
                     <!--header-->
                     <div class="header">
                         <h1 class="header-text">My Shopping List</h1>
-                        <p ng-click="sortList()">Sort </p>
                     </div>
+
+                    <p>Sort by:
+                        <select ng-model="orderProp">
+                            <option value="">None</option>
+                            <option value="name">Alphabetical</option>
+                            <!-- <option value="done">Done</option> -->
+                        </select>
+                    </p>
+                    <p>
+                        Search:
+                        <input ng-model="query"> 
+                    </p>
+
+
 
                     <!--Shopping list items-->
                     
                     <ul class="list">
                         <li ng-class="{'item-done': item.done}"
                             class="list-item" 
-                            ng-repeat="item in items">
+                            ng-repeat="item in items | orderBy:orderProp | filter:query ">
                             {{item.name}} 
                             <span>
                                 <i ng-class="{'item-done-icon': item.done}"

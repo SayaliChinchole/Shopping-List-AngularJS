@@ -10,17 +10,17 @@ app.controller("myCtrl", function ($scope) {
             name: "Banana",
             done: false
         },
-        // { 
-        //     name: "Mango",
-        //     done : "false"
-        // },
-        // { 
-        //     name: "Candy",
-        //     done : "false"
-        // }, 
+        { 
+            name: "Mango",
+            done : false
+        },
+        { 
+            name: "Candy",
+            done : false
+        }, 
         // { 
         //     name: "Bread",
-        //     done : "false"
+        //     done : false
         // },
     ]
 
